@@ -1,0 +1,33 @@
+.cursor {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  color: $white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-weight: $font-weight-normal;
+
+  & > div {
+    line-height: 180%;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ebd562;
+    opacity: 0.3;
+    filter: blur(1.5rem);
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
